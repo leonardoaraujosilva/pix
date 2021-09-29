@@ -24,6 +24,6 @@ public class Usuario {
     private String sobrenome;
 
     @OneToOne(optional = false)
-    private ContaCorrente contaCorrente;
+    private ContaCorrente conta;
 
 }
