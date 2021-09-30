@@ -2,6 +2,7 @@ package matera.bootcamp.pix.domain.model;
 
 import lombok.Data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +24,7 @@ public class Usuario {
     @Column
     private String sobrenome;
 
-    @OneToOne(optional = false)
-    private ContaCorrente conta;
+    @OneToOne(optional = false, cascade = { CascadeType.ALL })
+    private ContaCorrente contaCorrente;
 
 }
