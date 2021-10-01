@@ -2,29 +2,31 @@ package matera.bootcamp.pix.domain.model;
 
 import lombok.Data;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Data
 @Entity
-public class Usuario {
+public class Chave {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
-    private String nome;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private TipoChave tipoChave;
 
-    @Column
-    private String sobrenome;
+    @Column(nullable = false)
+    private String valor;
 
-    @OneToOne(optional = false, cascade = { CascadeType.ALL })
+    @ManyToOne(optional = false)
     private ContaCorrente contaCorrente;
 
 }
