@@ -2,7 +2,6 @@ package matera.bootcamp.pix.service.chave;
 
 import lombok.RequiredArgsConstructor;
 import matera.bootcamp.pix.domain.model.Chave;
-import matera.bootcamp.pix.domain.model.ContaCorrente;
 import matera.bootcamp.pix.domain.repository.ChaveRepository;
 import matera.bootcamp.pix.domain.repository.ContaCorrenteRepository;
 import org.springframework.stereotype.Service;
